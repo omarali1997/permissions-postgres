@@ -1,9 +1,7 @@
-FROM python:3
-
+FROM python:3.8-slim
+ENV BUILDKIT_PROGRESS=plain
 ENV PYTHONDONTWRITEBYTECODE 1
-
 ENV PYTHONUNBUFFERED 1
-
 RUN mkdir /code
 WORKDIR /code
 COPY requirements.txt /code/
